@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="890.0" prefWidth="1133.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.project.turingmachineproject.TuringMachineAdditionController">
+   <children>
+      <AnchorPane fx:id="TapeCellsContainer" layoutX="173.0" layoutY="624.0" prefHeight="200.0" prefWidth="809.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="78.0" pannable="true" prefHeight="100.0" prefWidth="832.0" vbarPolicy="NEVER">
+               <content>
+                  <HBox fx:id="TapeCells" prefHeight="99.0" prefWidth="833.0" />
+               </content>
+            </ScrollPane>
+            <MFXTextField fx:id="inputField2" layoutX="1.0" layoutY="-11.0" prefHeight="49.0" prefWidth="363.0" />
+            <MFXButton fx:id="startButton" layoutX="567.0" layoutY="-1.0" onAction="#startAutomaticMovement" text="Start" />
+            <MFXButton fx:id="sendButton" buttonType="RAISED" layoutX="418.0" layoutY="-4.0" onAction="#generateTape" text="Send" />
+         </children>
+      </AnchorPane>
+      <MFXTextField fx:id="inputField1" layoutX="173.0" layoutY="561.0" prefHeight="49.0" prefWidth="363.0" />
+      <AnchorPane fx:id="diagramPane" layoutX="102.0" layoutY="20.0" prefHeight="457.0" prefWidth="930.0" />
+      <Label fx:id="result" layoutX="633.0" layoutY="843.0" prefHeight="17.0" prefWidth="182.0" />
+   </children>
+</AnchorPane>
